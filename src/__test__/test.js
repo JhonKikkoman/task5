@@ -1,4 +1,3 @@
-eslint-disable no-unused-vars
 import Character from '../character';
 import Swordsman from '../swordsman';
 
@@ -14,15 +13,11 @@ test('checking name and type', () => {
 });
 
 test('checking-error name', () => {
-  expect(() => {
-    let character = new Character('J', 'Swordsman');
-  }).toThrow();
+  expect(() => new Character('J', 'Swordsman')).toThrow();
 });
 
 test('checking-error type', () => {
-  expect(() => {
-    const character = new Character('Jhon', 'Archmage');
-  }).toThrow();
+  expect(() => new Character('Jhon', 'Archmage')).toThrow();
 });
 
 describe('check method levelUp', () => {

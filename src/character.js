@@ -11,7 +11,7 @@ export default class Character {
       'Undead',
       'Zombie',
     ];
-    if (arr.includes(type) === false) {
+    if (!arr.includes(type)) {
       throw new Error(`Ошибка: ${type}`);
     }
     this.name = name;
